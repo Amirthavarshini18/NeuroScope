@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeuroScope</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>NeuroScope</h1>
+      
+`    </header>
+
+    <section class="panel">
+      <label for="text">Paste recent journal entry, chat, or notes</label>
+      <textarea id="text" placeholder="How are you feeling today?" rows="6"></textarea>
+      <div class="actions">
+        <button id="analyze">Analyze & Recommend</button>
+        <span id="status" class="muted"></span>
+      </div>
+      <div id="result" class="result hidden">
+        <h3>Detected emotion: <span id="emotion"></span></h3>
+        <p id="message"></p>
+      </div>
+    </section>
+
+    <section class="panel chart-panel">
+      <h3>Mood vs Productivity</h3>
+      <canvas id="moodChart" width="600" height="300"></canvas>
+    </section>
+
+    <footer>
+        <br>
+        <small> NeuroScope </small>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
